@@ -26,7 +26,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm6225-common/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/xiaomi/sm6225-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/xiaomi/sm6225-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
-    vendor/xiaomi/sm6225-common/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     vendor/xiaomi/sm6225-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/xiaomi/sm6225-common/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/xiaomi/sm6225-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -435,6 +434,7 @@ PRODUCT_PACKAGES += \
     libtinyxml2_1 \
     libtrustedapploader \
     libtzdrmgenprov \
+    libvendor.xiaomi.hardware.displayfeature@1.0 \
     libvideotxr \
     libvideoutils \
     libwfdcodecv4l2_proprietary \
@@ -608,7 +608,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspmhal@1.0-impl \
     vendor.qti.qspmhal@1.0 \
     vendor.qti.voiceprint@1.0 \
-    vendor.xiaomi.hardware.displayfeature@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     fm_helium \
     libdpmctmgr \
@@ -680,7 +679,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.alarm-V1.0-java \
     android.hardware.security.keymint-service-qti.xml \
     c2_manifest_vendor_audio.xml \
-    c2_manifest_vendor_sapphire.xml \
+    c2_manifest_vendor_xun.xml \
     manifest_android.hardware.drm-service.widevine.xml \
     manifest_non_qmaa.xml \
     manifest_non_qmaa_extn.xml \
@@ -696,7 +695,6 @@ PRODUCT_PACKAGES += \
     battery_stats \
     cdsprpcd \
     cnd \
-    cnss-daemon \
     diag-router \
     displayfeature \
     dspservice \
@@ -704,7 +702,6 @@ PRODUCT_PACKAGES += \
     engine-service \
     hdcp1prov \
     hdcp2p2prov \
-    hvdcp_opti \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
@@ -730,7 +727,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.psiclient@1.0-service \
     vendor.xiaomi.hardware.displayfeature@1.0-service \
     init.qcom.sensors \
-    init.qti.chg_policy \
     init.qti.qcv \
     irsc_util \
     ks \
