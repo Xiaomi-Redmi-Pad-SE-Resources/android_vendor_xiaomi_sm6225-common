@@ -2792,6 +2792,24 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vendor.xiaomi.hardware.micharge@1.0-impl",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so"],
+			shared_libs: ["libbase", "libhidlbase", "liblog", "libutils", "libcutils", "vendor.xiaomi.hardware.micharge@1.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "lib-imscommon",
 	owner: "xiaomi",
 	strip: {
@@ -8399,6 +8417,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vendor.xiaomi.hardware.micharge@1.0",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so"],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libqcc",
 	owner: "xiaomi",
 	strip: {
@@ -9566,6 +9601,15 @@ prebuilt_etc_xml {
 	soc_specific: true,
 }
 
+prebuilt_etc_xml {
+	name: "vendor.xiaomi.hardware.micharge@1.0.xml",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
 cc_prebuilt_binary {
 	name: "SoterProvisioningTool",
 	owner: "xiaomi",
@@ -10184,11 +10228,37 @@ cc_prebuilt_binary {
 	soc_specific: true,
 }
 
+cc_prebuilt_binary {
+	name: "vendor.xiaomi.hardware.micharge@1.0-service",
+	owner: "xiaomi",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service"],
+			shared_libs: ["liblog", "libcutils", "libhidlbase", "libhardware", "libutils", "vendor.xiaomi.hardware.micharge@1.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+
 sh_binary {
 	name: "init.qcom.sensors",
 	owner: "xiaomi",
 	src: "proprietary/vendor/bin/init.qcom.sensors.sh",
 	filename: "init.qcom.sensors.sh",
+	soc_specific: true,
+}
+
+sh_binary {
+	name: "init.qti.media",
+	owner: "xiaomi",
+	src: "proprietary/vendor/bin/init.qti.media.sh",
+	filename: "init.qti.media.sh",
 	soc_specific: true,
 }
 
